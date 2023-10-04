@@ -1,0 +1,13 @@
+转换算子
+1、map
+2、mapPartitions：以分区为单位发送到计算节点进行处理
+3、mapPartitionsWithIndex：时可以获取当前分区索引
+4、flatMap
+5、glom：将同一个分区的数据直接转换为相同类型的内存数组进行处理，分区不变
+6、groupBy
+7、filter
+8、sample
+9、distinct：去重
+10、coalesce：合并分区
+11、sortBy：排序
+12、partitionBy：重分区
