@@ -1,6 +1,7 @@
 package com.zjj.bigdata.spark.core.framework.dao
 
 import com.zjj.bigdata.spark.core.framework.common.TDao
+import org.apache.spark.rdd.RDD
 
 /**
  * @author ZJJ

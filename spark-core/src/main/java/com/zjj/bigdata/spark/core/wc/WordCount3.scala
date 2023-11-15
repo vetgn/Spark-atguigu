@@ -22,7 +22,7 @@ object WordCount3 {
     // Spark可以将分组和聚合使用一个方法实现
     // reduceByKey：相同的key数据，可以对value进行reduce聚合
     val wordToCount = wordToOne.reduceByKey(_ + _)
-    wordToCount.saveAsTextFile("output")
+//    wordToCount.saveAsTextFile("output")
     val array: Array[(String, Int)] = wordToCount.collect()
     array.foreach(println)
     sc.close()
