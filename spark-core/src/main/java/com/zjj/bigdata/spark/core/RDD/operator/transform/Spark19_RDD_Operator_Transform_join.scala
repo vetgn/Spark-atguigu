@@ -10,7 +10,9 @@ import org.apache.spark.{SparkConf, SparkContext}
  */
 object Spark19_RDD_Operator_Transform_join {
   def main(args: Array[String]): Unit = {
-    val sc = new SparkContext(new SparkConf().setMaster("local[*]").setAppName("Operator_Transform"))
+    val conf = new SparkConf().setMaster("local[*]").setAppName("Operator_Transform")
+    conf.set("spark.port.maxRetries", "128")
+    val sc = new SparkContext(conf)
 
     // 相同key的会连接形成元组
     // 没有匹对的，不会显示
