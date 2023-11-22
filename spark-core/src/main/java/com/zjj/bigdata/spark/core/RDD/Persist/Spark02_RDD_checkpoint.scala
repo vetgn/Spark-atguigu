@@ -11,6 +11,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object Spark02_RDD_checkpoint {
   def main(args: Array[String]): Unit = {
     val sc = new SparkContext(new SparkConf().setMaster("local[*]").setAppName("Persist"))
+    sc.setCheckpointDir("datas/cp")
     val rdd = sc.makeRDD(List("Hello World", "Hello Spark"))
     val flatRdd = rdd.flatMap(_.split(" "))
     val mapRdd = flatRdd.map(word => {
