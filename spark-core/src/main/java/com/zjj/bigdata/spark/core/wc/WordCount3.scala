@@ -14,7 +14,7 @@ object WordCount3 {
     val sparConf = new SparkConf().setMaster("local").setAppName("WordCount")
     val sc = new SparkContext(sparConf)
 
-    val lines: RDD[String] = sc.textFile("datas")
+    val lines: RDD[String] = sc.textFile("datas/word")
     val words: RDD[String] = lines.flatMap(_.split(" "))
 
     val wordToOne = words.map(word => (word, 1))

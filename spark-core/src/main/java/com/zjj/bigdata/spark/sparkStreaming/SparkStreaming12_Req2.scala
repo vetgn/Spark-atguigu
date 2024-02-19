@@ -19,7 +19,7 @@ object SparkStreaming12_Req2 {
     //3.定义 Kafka 参数
     val kafkaPara: Map[String, Object] = Map[String, Object](
       ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG -> "hadoop102:9092,hadoop103:9092,hadoop104:9092",
-      ConsumerConfig.GROUP_ID_CONFIG -> "zjj",
+      ConsumerConfig.GROUP_ID_CONFIG -> "zjj1",
       "key.deserializer" ->
         "org.apache.kafka.common.serialization.StringDeserializer",
       "value.deserializer" ->
